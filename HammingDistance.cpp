@@ -13,3 +13,13 @@ public:
         return count;
     }
 };
+/*
+#include <bitset>
+class Solution {
+public:
+    int hammingDistance(int x, int y) {
+        bitset<32> num1(x^y);
+        return num1.count();
+    }
+};
+*/

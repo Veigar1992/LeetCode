@@ -1,0 +1,27 @@
+class Solution {
+public:
+    string addStrings(string num1, string num2) {
+        string rs="";
+        int n1=num1.size()-1;
+        int n2=num2.size()-1;
+        int j=0;
+        while(n1>=0 || n2>=0){
+            int a,b;
+            if (n1>=0) a = num1[n1--]-'0';
+            else a = 0;
+            if (n2>=0) b = num2[n2--]-'0';
+            else b = 0;
+            
+            int c = a+b+j;
+            if (c>=10){
+                j=1;
+                rs = to_string(c-10) + rs;
+            }
+            else {
+                j=0;
+                rs = to_string(c) + rs;
+            }
+        }
+        return (j>0)?"1"+rs:rs;
+    }
+};

@@ -1,0 +1,6 @@
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        return 1==(bitset<32>(n).count()) && n>0;
+    }
+};
